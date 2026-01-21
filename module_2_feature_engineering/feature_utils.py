@@ -5,6 +5,7 @@ import re
 import numpy as np
 import pandas as pd
 
+# COPY_KEYWORDS: Chinese cues that likely come from pasted homework/exam text
 COPY_KEYWORDS = [
     "如下", "如上", "这道题", "怎么做", "哪里错了",
     "A.", "B.", "C.", "D.",
@@ -14,22 +15,26 @@ COPY_KEYWORDS = [
     "有什么作用", "请上传你的文件", "please upload the file"
 ]
 
+# Numeric patterns seen in Chinese exam text
 COPY_KEYWORDS_PATTERNS = [
     r'\d+分',
     r'第\d+题'
 ]
 
+# Phrases indicating direct answer seeking in prompts
 ANSWER_SEEKING_KEYWORDS_PROMPT = [
     "答案", "选什么", "选哪个", "做一下", "解一下", "求解", "答案是什么",
     "帮我做", "直接告诉我", "怎么选", "结果是", "最终结果", "帮我算",
     "正确答案", "标准答案", "给我答案"
 ]
 
+# Phrases indicating the AI reply is discussing exam answers/options
 ANSWER_SEEKING_KEYWORDS_AI = [
     "题目", "练习题", "习题", "选择题", "多选题", "单选题", "填空题",
     "这道题", "这题", "答案", "选项", "正确答案", "应该选"
 ]
 
+# Phrases indicating conceptual understanding intent
 UNDERSTANDING_KEYWORDS_PROMPT = [
     "为什么", "为啥", "怎么会", "原因", "机制", "如何理解", "怎么理解",
     "我的理解是", "我觉得", "是不是", "是因为", "区别", "不同",

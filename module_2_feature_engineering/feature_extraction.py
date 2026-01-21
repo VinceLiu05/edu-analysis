@@ -64,6 +64,8 @@ def extract_features_from_dialog(
                 stats['File is empty'] = stats.get('File is empty', 0) + 1
             return None
 
+        # Chinese headers kept from source data:
+        # - 提问时间 (question_time), 提问内容 (question_text), AI回复 (ai_response)
         required_columns = ['提问时间', '提问内容', 'AI回复']
         missing_columns = [col for col in required_columns if col not in df.columns]
         if missing_columns:
@@ -75,6 +77,7 @@ def extract_features_from_dialog(
         df.fillna("", inplace=True)
         file_name = os.path.basename(file_path)
 
+        # 教学班ID = class_id
         if '教学班ID' not in df.columns:
             print(f"Warning: File missing class ID column: {file_name}")
             if stats is not None:
@@ -82,6 +85,7 @@ def extract_features_from_dialog(
             return None
         class_id = df["教学班ID"].iloc[0]
 
+        # 学生ID = student_id
         if '学生ID' not in df.columns:
             print(f"Warning: File missing student ID column: {file_name}")
             if stats is not None:
@@ -154,6 +158,7 @@ def extract_features_from_dialog(
         
         if '提问入口' in df.columns:
             confusion_entries = {"课堂不懂", "课件不懂", "习题不懂"}
+            # 提问入口 values: in-class confusion / slides confusion / exercises confusion
             mask = df.get("提问入口", pd.Series([], dtype=object)).fillna("").isin(confusion_entries)
             is_confusion_entry = int(mask.any()) if qa_turns > 0 else 0
         else:

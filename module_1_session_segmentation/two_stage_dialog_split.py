@@ -77,6 +77,8 @@ def robust_read_csv(file_path, text_columns=None):
     df.columns = df.columns.str.strip()
     
     # Check required columns
+    # Chinese column names preserved from raw CSVs:
+    # - 学生ID (student_id), 提问时间 (question_time)
     required_cols = ["学生ID", "提问时间"]
     for col in required_cols:
         if col not in df.columns:
@@ -193,7 +195,7 @@ def entrance_based_split(df):
     df = df.sort_values("提问时间").reset_index(drop=True)
     
     current_chunk = [df.iloc[0]]
-    current_entrance = df.iloc[0].get("提问入口", "")
+    current_entrance = df.iloc[0].get("提问入口", "")  # 提问入口 = question entry/source
     
     for i in range(1, len(df)):
         row_entrance = df.iloc[i].get("提问入口", "")
