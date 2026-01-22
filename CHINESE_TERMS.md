@@ -1,6 +1,6 @@
 # Chinese Terms Reference (Modules 1 & 2)
 
-We keep a few Chinese column names/values because the raw dataset is in Chinese. This note clarifies their meanings so downstream users can read the code and outputs without ambiguity.
+We keep a few Chinese column names/values because the raw dataset is in Chinese. This note clarifies their meanings so research teams can read the code and outputs without ambiguity.
 
 ## High-frequency columns
 - `学生ID` — student_id
