@@ -78,8 +78,8 @@ python run.py \
 ```bash
 cd module_4_process_mining
 python fomm.py \
-    --clustered_features /path/to/clustered_features.csv \
-    --output_folder /path/to/process_mining_results
+    --cluster_csv /path/to/clustered_features.csv \
+    --output_dir /path/to/process_mining_results
 ```
 
 ## Project Structure
