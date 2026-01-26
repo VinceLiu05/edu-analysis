@@ -43,7 +43,7 @@ pip install -r requirements.txt
 
 ```bash
 cd module_1_session_segmentation
-python run.py \
+python two_stage_dialog_split.py \
     --input_folder /path/to/raw/dialog/csv \
     --output_folder /path/to/segmented/output \
     [--enable_llm] \
@@ -115,7 +115,11 @@ data_analysis/
 
 Each module contains:
 - `__init__.py`: Module-level documentation (visible when importing)
-- `run.py`: Main entry point for the module
+- Main entry point:
+  - Module 1: `two_stage_dialog_split.py`
+  - Module 2: `run.py`
+  - Module 3: `run.py`
+  - Module 4: `fomm.py`
 - Additional utility files as needed
 
 ## Output Files
@@ -145,8 +149,10 @@ Each module contains:
 - `clustering_09_course_progress_distribution.png`: Course progress distribution by cluster
 
 ### Module 4 Output
-- `transition_probability_heatmap.png`: State transition probability matrix
-- Additional process mining visualizations
+- `transition_probability_heatmap.png`: State transition probability matrix (heatmap)
+- `transition_probability_heatmap_with_counts.png`: Transition probability matrix with count annotations
+- `transition_count_matrix.csv`: Raw transition count matrix
+- `transition_probability_matrix.csv`: Transition probability matrix (CSV format)
 
 ## License
 
