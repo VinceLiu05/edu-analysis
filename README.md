@@ -88,11 +88,13 @@ python fomm.py \
 data_analysis/
 ├── README.md                          # This file
 ├── LICENSE                            # MIT License
+├── requirements.txt                   # Python dependencies
+├── CHINESE_TERMS.md                   # Chinese column names and values reference
+├── FEATURE_ENGINEERING.md             # Feature definitions and formulas
 ├── .gitignore                         # Git ignore rules
 ├── module_1_session_segmentation/    # Module 1: Session segmentation
 │   ├── __init__.py
-│   ├── two_stage_dialog_split.py
-│   └── run.py
+│   └── two_stage_dialog_split.py
 ├── module_2_feature_engineering/     # Module 2: Feature extraction
 │   ├── __init__.py
 │   ├── feature_extraction.py
