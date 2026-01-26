@@ -1,4 +1,4 @@
-# Chinese Terms Reference (Modules 1 & 2)
+# Chinese Terms Reference
 
 We keep a few Chinese column names/values because the raw dataset is in Chinese. This note clarifies their meanings so research teams can read the code and outputs without ambiguity.
 
@@ -15,5 +15,5 @@ We keep a few Chinese column names/values because the raw dataset is in Chinese.
 
 If you see other Chinese strings in log messages, they come from the original CSV headers/values and are preserved to avoid data loss.
 
-For details on Chinese keyword dictionaries used in feature calculations, see `FEATURE_ENGINEERING.md`.
+For details on Chinese keyword dictionaries used in feature calculations, see [`FEATURE_ENGINEERING.md`](FEATURE_ENGINEERING.md).
 
