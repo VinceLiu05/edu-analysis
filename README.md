@@ -89,7 +89,6 @@ data_analysis/
 ├── README.md                          # This file
 ├── LICENSE                            # MIT License
 ├── requirements.txt                   # Python dependencies
-├── CHINESE_TERMS.md                   # Chinese column names and values reference
 ├── FEATURE_ENGINEERING.md             # Feature definitions and formulas
 ├── .gitignore                         # Git ignore rules
 ├── module_1_session_segmentation/    # Module 1: Session segmentation
